@@ -24,8 +24,10 @@ class MyImages{
   static String group1 = "assets/group_14.png";
   static String triangleRed = "assets/tringle red.png";
   static String triangleGreen = "assets/triangle green.png";
-  static String activeLog = "assets/group_4.png";
   static String roundGirl2 = "assets/round girl 2.png";
   static String dropDownIcon = "assets/drop down.png";
+  static String google = "assets/google.png";
+  static String facebook = "assets/facebook.png";
+  static String outlook = "assets/outlook.png";
 
 }

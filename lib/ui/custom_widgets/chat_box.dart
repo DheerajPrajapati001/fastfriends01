@@ -9,8 +9,8 @@ class ChatBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height*.07,
-      width: MediaQuery.of(context).size.width*.53,
+      height: 60,
+      width: 250,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -22,8 +22,11 @@ class ChatBox extends StatelessWidget {
           )
         ]
       ),
-      child: Center(
-        child: Text(msg),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Center(
+          child: Text(msg,style: TextStyle(fontSize: MediaQuery.of(context).size.height*.015,fontFamily: 'Segu'),),
+        ),
       ),
     );
   }

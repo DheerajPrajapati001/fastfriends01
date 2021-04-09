@@ -11,6 +11,14 @@ class AddFriends extends StatelessWidget {
           height: MediaQuery.of(context).size.height*.25,
           width: MediaQuery.of(context).size.width*.8,
           decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    offset: Offset(2,2),
+                    blurRadius: 10,
+                    spreadRadius: 5
+                )
+              ],
             color: Color(0xffECECEC),
             borderRadius: BorderRadius.circular(30),
             border: Border.all(color: MyColors.contBorderClr)
@@ -36,8 +44,13 @@ class AddFriends extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.white
                 ),
-                child: Center(
-                  child: Text(MyStrings.enterFrndPhone,style: TextStyle(color: MyColors.liteGreyFont),),
+                child: TextField(textAlign: TextAlign.center,
+                  keyboardType: TextInputType.number,
+                  style: TextStyle(fontFamily: 'Segu'),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: MyStrings.enterFrndPhone
+                  ),
                 ),
               ),
               SizedBox(
@@ -50,7 +63,7 @@ class AddFriends extends StatelessWidget {
                   )),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 3),
-                    child: Text(MyStrings.friendRequestSend),
+                    child: Text(MyStrings.friendRequestSend,style: TextStyle(fontFamily: 'Segu'),),
                   ),
                   Expanded(child: Divider(
                     color: Colors.black,

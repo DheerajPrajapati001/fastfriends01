@@ -28,37 +28,28 @@ class Verify extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 60),
-              child: InkWell(
-                onTap: () {},
-                child: Container(
-                    height: MediaQuery.of(context).size.height * .075,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            width: 1.5, color: MyColors.contBorderClr),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.3),
-                              blurRadius: 5,
-                              spreadRadius: 5,
-                              offset: Offset(2, 2))
-                        ],
-                        borderRadius: BorderRadius.circular(50),
-                        color: MyColors.liteGrey),
-                    child: Center(
-                      child: Stack(
-                        children: <Widget>[
-                          Text(
-                            MyStrings.code,
-                            style: TextStyle(
-                              fontFamily: 'Segu',
-                              fontSize: MediaQuery.of(context).size.width * .05,
-                              color: MyColors.contBorderClr,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )),
-              ),
+              child: Container(
+                  height: MediaQuery.of(context).size.height * .075,
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          width: 1.5, color: MyColors.contBorderClr),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.3),
+                            blurRadius: 5,
+                            spreadRadius: 5,
+                            offset: Offset(2, 2))
+                      ],
+                      borderRadius: BorderRadius.circular(50),
+                      color: MyColors.liteGrey),
+                  child: TextField(
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                        hintText: 'Code',
+                        hintStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.greyFont,fontFamily: 'Segu'),
+                        border: InputBorder.none
+                    ),
+                  ),),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * .03,

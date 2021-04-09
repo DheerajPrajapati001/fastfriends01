@@ -1,3 +1,4 @@
+import 'package:fastfriends/ui/screens/create_account/create_account.dart';
 import 'package:flutter/material.dart';
 
 class Buttons extends StatefulWidget {
@@ -28,7 +29,7 @@ class _ButtonsState extends State<Buttons> {
                   child: Text('Page 3'),
                 ),
                 SizedBox(height: 10,),
-                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page4');},
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, CreateAccount.route);},
                   child: Text('Page 4'),
                 ),
                 SizedBox(height: 10,),
@@ -90,6 +91,10 @@ class _ButtonsState extends State<Buttons> {
                 SizedBox(height: 10,),
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page19');},
                   child: Text('Page 19'),
+                ),
+                SizedBox(height: 10,),
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page20');},
+                  child: Text('Page 20'),
                 ),
                 SizedBox(height: 10,),
               ],

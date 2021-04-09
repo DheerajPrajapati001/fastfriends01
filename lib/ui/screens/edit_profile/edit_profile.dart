@@ -9,7 +9,7 @@ class EditProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.mainBgClr,
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             CustomAppbar(
@@ -27,11 +27,27 @@ class EditProfile extends StatelessWidget {
               height: MediaQuery.of(context).size.height*.2,
               width: MediaQuery.of(context).size.width*.7,
               decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        offset: Offset(2,2),
+                        blurRadius: 10,
+                        spreadRadius: 5
+                    )
+                  ],
                 border: Border.all(color: MyColors.contBorderClr),
                 color: MyColors.liteGrey
               ),
-              child: Center(
-                child: Icon(Icons.add),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: (){},
+                  splashColor: Colors.black.withOpacity(0.1),
+                  radius: 500,
+                  child: Center(
+                    child: Icon(Icons.add),
+                  ),
+                ),
               ),
             ),
             SizedBox(
@@ -45,11 +61,30 @@ class EditProfile extends StatelessWidget {
               height: MediaQuery.of(context).size.height*.2,
               width: MediaQuery.of(context).size.width*.7,
               decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        offset: Offset(2,2),
+                        blurRadius: 10,
+                        spreadRadius: 5
+                    )
+                  ],
                   border: Border.all(color: MyColors.contBorderClr),
                   color: MyColors.liteGrey
               ),
-              child: Center(
-                child: Text(MyStrings.addBio,style: TextStyle(color: Color(0xffA7AAA7)),),
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Center(
+                  child: TextField(
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: MyStrings.addBio,
+                      hintStyle: TextStyle(
+                          color: MyColors.greyFont.withOpacity(0.5),fontFamily: 'Segu'),
+                    ),
+                  ),
+                ),
               ),
             ),
             SizedBox(
@@ -63,11 +98,21 @@ class EditProfile extends StatelessWidget {
               height: MediaQuery.of(context).size.height*.05,
               width: MediaQuery.of(context).size.width*.7,
               decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        offset: Offset(2,2),
+                        blurRadius: 10,
+                        spreadRadius: 5
+                    )
+                  ],
                   border: Border.all(color: MyColors.contBorderClr),
                   color: MyColors.liteGrey
               ),
             ),
-            Spacer(),
+            SizedBox(
+              height: MediaQuery.of(context).size.height*.07,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50),
               child: BlueButton(

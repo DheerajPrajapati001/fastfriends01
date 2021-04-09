@@ -1,9 +1,12 @@
+import 'package:fastfriends/DEMO.dart';
 import 'package:fastfriends/buttons.dart';
+import 'package:fastfriends/fonts_test.dart';
 import 'package:fastfriends/ui/screens/add_friends/add_friends.dart';
 import 'package:fastfriends/ui/screens/chat/chat.dart';
 import 'package:fastfriends/ui/screens/create_account/create_account.dart';
 import 'package:fastfriends/ui/screens/create_event/create_event.dart';
 import 'package:fastfriends/ui/screens/edit_profile/edit_profile.dart';
+import 'package:fastfriends/ui/screens/hangout%20_has_ended/hangout%20_has_ended.dart';
 import 'package:fastfriends/ui/screens/history/history.dart';
 import 'package:fastfriends/ui/screens/invite_friends/invite_friends.dart';
 import 'package:fastfriends/ui/screens/login/login.dart';
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'TekoLight',
+        fontFamily: 'Teko',
       ),
       debugShowCheckedModeBanner: false,
       home: Buttons(),
@@ -37,12 +40,12 @@ class MyApp extends StatelessWidget {
         'Page1': (context) => Login(),
         'Page2': (context) => PhoneNumber(),
         'Page3': (context) => Verify(),
-        'Page4': (context) => CreateAccount(),
+        CreateAccount.route: (context) => CreateAccount(),
         'Page5': (context) => CreateEvent(),
         'Page6': (context) => MatchMe(),
         'Page7': (context) => InviteFriends(),
         'Page8': (context) => AddFriends(),
-        'Page9': (context) => Chat(),
+        'Page9': (context) =>  Chat(),
         'Page10': (context) => MyFriendsEvents(),
         'Page11': (context) => MyEvents(),
         'Page12': (context) => History(),
@@ -53,6 +56,7 @@ class MyApp extends StatelessWidget {
         'Page17': (context) => Suggestion(),
         'Page18': (context) => Rating(),
         'Page19': (context) => PopUps(),
+        'Page20': (context) => HangoutHasEnded(),
       },
     );
   }

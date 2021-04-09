@@ -92,6 +92,7 @@ class MyStrings {
   static String decline = "Decline";
   static String hangoutHas  = "Hangout Has Ended";
   static String enterFrndPhone  = "Enter friends phone number";
+//  static String   = "Hangout Has Ended";
 }
 
 class MyStyles{

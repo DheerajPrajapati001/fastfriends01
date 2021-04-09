@@ -9,72 +9,85 @@ class OtherPreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.mainBgClr,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
-            child: Column(
-              children: [
-                Row(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+          child: Column(
+            children: [
+              SafeArea(
+                child: Row(
                   children: [
-                    Icon(Icons.arrow_back_ios,color: MyColors.greyFont,),
-                  ],
-                ),
-                Image.asset(MyImages.squareGirl,height: MediaQuery.of(context).size.height*.4,),
-                Text('Lisa, 21',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.1),),
-                SizedBox(
-                  height: 10,
-                ),
-                Image.asset(MyImages.diamond,height: MediaQuery.of(context).size.width*.08,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        Text('Karma',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.06),),
-                        Text('2000',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.blueClr),),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text('Level',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.06),),
-                        Text('6',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.blueClr),),
-                      ],
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                          onTap: (){},
+                          splashColor: Colors.black.withOpacity(0.1),
+                          radius: 50,
+                          child: Icon(Icons.arrow_back_ios,color: MyColors.greyFont,)),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Text(MyStrings.iAmAstrologist,textAlign: TextAlign.center,style: TextStyle(fontSize: MediaQuery.of(context).size.width*.04),),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height*.1,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 100),
-                  child: Container(
-                      height: MediaQuery.of(context).size.height*.075,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 1.5,
-                              color: MyColors.contBorderClr
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.withOpacity(0.3),
-                                blurRadius: 5,
-                                spreadRadius: 5,
-                                offset: Offset(2,2)
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(50),
-                          color: MyColors.redClr
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 5),
+              ),
+              Image.asset(MyImages.squareGirl,height: MediaQuery.of(context).size.height*.4,),
+              Text('Lisa, 21',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.1),),
+              SizedBox(
+                height: 10,
+              ),
+              Image.asset(MyImages.diamond,height: MediaQuery.of(context).size.width*.08,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Text('Karma',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.06),),
+                      Text('2000',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.blueClr),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text('Level',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.06),),
+                      Text('6',style: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.blueClr),),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50),
+                child: Text(MyStrings.iAmAstrologist,textAlign: TextAlign.center,style: TextStyle(fontSize: MediaQuery.of(context).size.width*.04),),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height*.08,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 100),
+                child: Container(
+                    height: MediaQuery.of(context).size.height*.075,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            width: 1.5,
+                            color: MyColors.contBorderClr
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.withOpacity(0.3),
+                              blurRadius: 5,
+                              spreadRadius: 5,
+                              offset: Offset(2,2)
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(50),
+                        color: MyColors.redClr
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: (){},
+                        borderRadius: BorderRadius.circular(50),
+                        splashColor: MyColors.redClr,
+                        radius: 500,
                         child: Center(
                           child:  Stack(
                             children: <Widget>[
@@ -100,10 +113,10 @@ class OtherPreview extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )),
-                )
-              ],
-            ),
+                      ),
+                    )),
+              )
+            ],
           ),
         ),
       ),

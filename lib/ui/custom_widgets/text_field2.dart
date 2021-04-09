@@ -12,7 +12,7 @@ class TextField2 extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 60),
       child: Container(
-          height: MediaQuery.of(context).size.height*.075,
+          height: MediaQuery.of(context).size.height*.07,
           decoration: BoxDecoration(
             border: Border.all(
               color: MyColors.contBorderClr
@@ -24,6 +24,7 @@ class TextField2 extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Center(
               child: TextField(
+                textAlign: TextAlign.center,
                 decoration: InputDecoration(
                     hintText: text,
                     hintStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.greyFont),

@@ -8,36 +8,44 @@ class UpperContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        height: MediaQuery.of(context).size.height * .18,
-        width: MediaQuery.of(context).size.width,
-        color: MyColors.blackCont,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 10,top: 10),
+    return Container(
+      height: 150,
+      width: MediaQuery.of(context).size.width,
+      color: MyColors.blackCont,
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10,top: 10),
+            child: SafeArea(
               child: Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.white,
+                  Material(
+                    child: InkWell(
+                      onTap: (){},
+                      splashColor: Colors.black,
+                      radius: 500,
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
+                    ),
+                    color: Colors.transparent,
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: MediaQuery.of(context).size.width*.15
             ),
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: MediaQuery.of(context).size.width*.15
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

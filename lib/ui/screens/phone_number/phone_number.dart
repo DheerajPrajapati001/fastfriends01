@@ -1,4 +1,5 @@
 import 'package:fastfriends/ui/custom_widgets/blue_button.dart';
+import 'package:fastfriends/ui/custom_widgets/social_media.dart';
 import 'package:fastfriends/ui/custom_widgets/text_field2.dart';
 import 'package:fastfriends/utils/my_colors.dart';
 import 'package:fastfriends/utils/my_images.dart';
@@ -29,26 +30,20 @@ class PhoneNumber extends StatelessWidget {
                 ),
                 Stack(
                   children: <Widget>[
-// Stroked text as border.
                     Text(
                       MyStrings.droppin,
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width*.2,
-                        fontWeight: FontWeight.w100,
-                        fontFamily: 'TekoLight',
+                        fontSize: MediaQuery.of(context).size.width*.17,
                         foreground: Paint()
                           ..style = PaintingStyle.stroke
                           ..strokeWidth = 2
                           ..color = Colors.white,
                       ),
                     ),
-// Solid text as fill.
                     Text(
                       MyStrings.droppin,
                       style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width*.2,
-                        fontWeight: FontWeight.w100,
-                        fontFamily: 'TekoLight',
+                        fontSize: MediaQuery.of(context).size.width*.17,
                         color: MyColors.mainFontGrey,
                       ),
                     ),
@@ -61,14 +56,64 @@ class PhoneNumber extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height*.05,
                 ),
-                TextField2(
-                  text: MyStrings.phone,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 60),
+                  child: Container(
+                      height: MediaQuery.of(context).size.height*.07,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: MyColors.contBorderClr
+                          ),
+                          borderRadius: BorderRadius.circular(50),
+                          color: MyColors.liteGrey
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Center(
+                          child: TextField(
+                            keyboardType: TextInputType.number,
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                                hintText: MyStrings.phoneNo,
+                                hintStyle: TextStyle(fontSize: MediaQuery.of(context).size.width*.05,color: MyColors.greyFont),
+                                border: InputBorder.none
+                            ),
+                          ),
+                        ),
+                      )),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height*.05,
                 ),
                 BlueButton(
                   text: MyStrings.enter,
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height*.2,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SocialMediaCont(
+                      img: MyImages.facebook,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SocialMediaCont(
+                      img: MyImages.google,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    SocialMediaCont(
+                      img: MyImages.outlook,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height*.15,
                 )
               ],
             ),

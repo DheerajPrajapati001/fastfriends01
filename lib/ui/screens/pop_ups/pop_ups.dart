@@ -10,59 +10,67 @@ class PopUps extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          height: MediaQuery.of(context).size.height*.25,
+          height: 200,
           width: MediaQuery.of(context).size.width*.8,
           decoration: BoxDecoration(
               color: Color(0xffECECEC),
               borderRadius: BorderRadius.circular(30),
               border: Border.all(color: MyColors.contBorderClr)
           ),
-          child: Column(
+          child: Stack(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height*.06,
-                width: MediaQuery.of(context).size.width*.8,
-                decoration: BoxDecoration(
-                  color: Color(0xff515252),
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30)),
-                ),
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              Row(
+              Column(
                 children: [
-                  Expanded(child: Divider(
-                    color: Colors.black,
-                    thickness: 1,
-                  )),
+                  Container(
+                    height: MediaQuery.of(context).size.height*.06,
+                    width: MediaQuery.of(context).size.width*.8,
+                    decoration: BoxDecoration(
+                      color: Color(0xff515252),
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30)),
+                    ),
+                  ),
                   SizedBox(
-                    width: 50,
+                    height: 40,
                   ),
-                  Expanded(child: Divider(
-                    color: Colors.black,
-                    thickness: 1,
-                  )),
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(MyStrings.monaWouldLike),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SmallBlueCont(
-                    text: MyStrings.accept,
+                  Row(
+                    children: [
+                      Expanded(child: Divider(
+                        color: Colors.black,
+                        thickness: 1,
+                      )),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Expanded(child: Divider(
+                        color: Colors.black,
+                        thickness: 1,
+                      )),
+                    ],
                   ),
-                  SmallBlueCont(
-                    text: MyStrings.decline,
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(MyStrings.monaWouldLike,style: TextStyle(fontFamily: 'Segu'),),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SmallBlueCont(
+                        text: MyStrings.accept,
+                      ),
+                      SmallBlueCont(
+                        text: MyStrings.decline,
+                      )
+                    ],
                   )
                 ],
-              )
+              ),
+              Positioned(
+                  right: MediaQuery.of(context).size.width*.8/2.8,
+                  top: MediaQuery.of(context).size.height*.02,
+                  child: Image.asset(MyImages.roundGirl,height: MediaQuery.of(context).size.height*.1,))
             ],
           ),
         ),

@@ -23,17 +23,26 @@ class SmallBlueCont extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(50),
           color: MyColors.blueClr),
-      child: Center(
-        child: Stack(
-          children: <Widget>[
-            Text(
-              text,
-              style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * .03,
-                color: Colors.white,
-              ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: (){},
+          borderRadius: BorderRadius.circular(50),
+          splashColor: Colors.blue,
+          radius: 500,
+          child: Center(
+            child: Stack(
+              children: <Widget>[
+                Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.width * .03,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

@@ -38,12 +38,13 @@ class MyEvents extends StatelessWidget {
                             Text(
                               "Hudsons Pub 6:00PM",
                               style: TextStyle(
-                                  fontSize: MediaQuery.of(context).size.width * .05,
-                                  fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                                  fontSize: MediaQuery.of(context).size.width * .05,fontFamily: 'Segu'),
                             ),
                             Text("shawnessy 1231 t2x",style: TextStyle(
                               color: MyColors.greyFont,
                               fontSize: MediaQuery.of(context).size.width * .04,
+                                fontFamily: 'Segu'
                             ),),
                             Row(
                               children: [
@@ -51,6 +52,7 @@ class MyEvents extends StatelessWidget {
                                   "Mona",
                                   style: TextStyle(
                                       color: Colors.blue,
+                                      fontFamily: 'Segu',
                                       fontSize:
                                       MediaQuery.of(context).size.width *
                                           .05),
@@ -77,7 +79,9 @@ class MyEvents extends StatelessWidget {
                             ),
                             Text("Hey we are going to eat and\ndrink at Hudsons tonight.",
                             style: TextStyle(
-                              fontSize: MediaQuery.of(context).size.width*.04
+                              fontWeight: FontWeight.w500 ,
+                              fontSize: MediaQuery.of(context).size.width*.04,
+                                fontFamily: 'Segu'
                             ),
                             )
                           ],
@@ -88,14 +92,14 @@ class MyEvents extends StatelessWidget {
                             Image.asset(MyImages.group1,width: MediaQuery.of(context).size.height*.15,),
                             Container(
                               height: MediaQuery.of(context).size.height*.1,
-                              width: MediaQuery.of(context).size.width*.3,
+                              width: MediaQuery.of(context).size.width*.28,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: AssetImage(MyImages.foodImage,)
                                 ),
-                                border: Border.all(color: MyColors.blueClr,width: 2)
+                                border: Border.all(color: MyColors.blueClr,width: 3)
                               ),
                             )
                           ],

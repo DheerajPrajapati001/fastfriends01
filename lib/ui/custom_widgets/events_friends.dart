@@ -5,40 +5,49 @@ import 'package:flutter/material.dart';
 class EventsFriends extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        height: MediaQuery.of(context).size.height * .2,
-        width: MediaQuery.of(context).size.width,
-        color: MyColors.blackCont,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 10,top: 10),
+    return Container(
+      height: MediaQuery.of(context).size.height * .2,
+      width: MediaQuery.of(context).size.width,
+      color: MyColors.blackCont,
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10,top: 10),
+            child: SafeArea(
               child: Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.white,
+                  Material(
+                    child: InkWell(
+                      onTap: (){},
+                      borderRadius: BorderRadius.circular(50),
+                      splashColor: Colors.black,
+                      radius: 100,
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
+                    ),
+                    color: Colors.transparent,
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GradientContainer(
-                  text: MyStrings.events,
-                ),
-                GradientContainer(
-                  text: MyStrings.friends,
-                )
-              ],
-            )
-          ],
-        ),
+          ),
+           SizedBox(
+            height: MediaQuery.of(context).size.height*.015,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              GradientContainer(
+                text: MyStrings.events,
+              ),
+              GradientContainer(
+                text: MyStrings.friends,
+              )
+            ],
+          )
+        ],
       ),
     );
   }
@@ -62,32 +71,40 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomCenter
         )
       ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child:  Stack(
-              children: <Widget>[
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: (){},
+            splashColor: Colors.blue,
+            radius: 100,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child:  Stack(
+                  children: <Widget>[
 // Stroked text as border.
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width*.07,
-                    foreground: Paint()
-                      ..style = PaintingStyle.stroke
-                      ..strokeWidth = 4
-                      ..color = MyColors.contBorderClr,
-                  ),
-                ),
+                    Text(
+                      text,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width*.07,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 4
+                          ..color = MyColors.contBorderClr,
+                      ),
+                    ),
 
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width*.07,
-                    fontWeight: FontWeight.w100,
-                    color: Colors.white,
-                  ),
+                    Text(
+                      text,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width*.07,
+                        fontWeight: FontWeight.w100,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         )
