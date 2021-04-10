@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:fastfriends/utils/my_images.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapScreen extends StatefulWidget {
   @override
@@ -7,12 +10,31 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
+
+  Completer<GoogleMapController> _controller = Completer();
+
+  static final CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(37.42796133580664, -122.8832357078792),
+    tilt: 59.440,
+    zoom: 10
+  );
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Stack(
           children: [
+            GoogleMap(
+              zoomControlsEnabled: true,
+              mapType: MapType.normal,
+              initialCameraPosition: _kGooglePlex,
+              onMapCreated: (GoogleMapController controller){
+                _controller.complete(controller);
+              },
+            ),
             SafeArea(
               child: Column(
                 children: [

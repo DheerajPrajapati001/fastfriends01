@@ -9,6 +9,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="fastfriends"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value=" AIzaSyC0L7UohhMK0N17F-1oQO37BJ4hGeqrIhE"/>
+
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

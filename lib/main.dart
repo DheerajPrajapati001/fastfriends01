@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
         'Page18': (context) => Rating(),
         'Page19': (context) => PopUps(),
         'Page20': (context) => HangoutHasEnded(),
+        'Page21': (context) => MapScreen(),
       },
     );
   }

@@ -17,18 +17,22 @@ class _ButtonsState extends State<Buttons> {
             Column(
               children: [
                 SizedBox(height: 20,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page1');},
                   child: Text('Page 1'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page2');},
                   child: Text('Page 2'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page3');},
                   child: Text('Page 3'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, CreateAccount.route);},
                   child: Text('Page 4'),
                 ),
@@ -73,28 +77,39 @@ class _ButtonsState extends State<Buttons> {
                   child: Text('Page 14'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page15');},
                   child: Text('Page 15'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page16');},
                   child: Text('Page 16'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page17');},
                   child: Text('Page 17'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page18');},
                   child: Text('Page 18'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page19');},
                   child: Text('Page 19'),
                 ),
                 SizedBox(height: 10,),
+                // ignore: deprecated_member_use
                 RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page20');},
                   child: Text('Page 20'),
+                ),
+                SizedBox(height: 10,),
+                // ignore: deprecated_member_use
+                RaisedButton(onPressed: () {Navigator.pushNamed(context, 'Page21');},
+                  child: Text('Page 21'),
                 ),
                 SizedBox(height: 10,),
               ],
