@@ -10,6 +10,7 @@ import 'package:fastfriends/ui/screens/hangout%20_has_ended/hangout%20_has_ended
 import 'package:fastfriends/ui/screens/history/history.dart';
 import 'package:fastfriends/ui/screens/invite_friends/invite_friends.dart';
 import 'package:fastfriends/ui/screens/login/login.dart';
+import 'package:fastfriends/ui/screens/map_screen/map_screen.dart';
 import 'package:fastfriends/ui/screens/match_me/match_me.dart';
 import 'package:fastfriends/ui/screens/my_events/my_events.dart';
 import 'package:fastfriends/ui/screens/my_friends_events/my_friends_event.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Teko',
       ),
       debugShowCheckedModeBanner: false,
-      home: Buttons(),
+      home: MapScreen(),
       routes: {
         'Page1': (context) => Login(),
         'Page2': (context) => PhoneNumber(),
