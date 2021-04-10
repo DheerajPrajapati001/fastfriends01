@@ -1,6 +1,5 @@
 import 'package:fastfriends/utils/my_images.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_google_maps/flutter_google_maps.dart';
 
 class MapScreen extends StatefulWidget {
   @override
@@ -14,9 +13,6 @@ class _MapScreenState extends State<MapScreen> {
       body: Container(
         child: Stack(
           children: [
-            GoogleMap(
-              
-            ),
             SafeArea(
               child: Column(
                 children: [

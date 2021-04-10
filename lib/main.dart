@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Teko',
       ),
       debugShowCheckedModeBanner: false,
-      home: MapScreen(),
+      home: Buttons(),
       routes: {
         'Page1': (context) => Login(),
         'Page2': (context) => PhoneNumber(),
