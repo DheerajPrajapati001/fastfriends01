@@ -9,7 +9,7 @@ class UpperContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 170,
       width: MediaQuery.of(context).size.width,
       color: MyColors.blackCont,
       child: Column(
@@ -35,8 +35,8 @@ class UpperContainer extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 10,
+           SizedBox(
+            height: MediaQuery.of(context).size.height*.017,
           ),
           Text(
             title,

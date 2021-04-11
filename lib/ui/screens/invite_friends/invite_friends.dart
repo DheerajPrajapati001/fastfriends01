@@ -245,14 +245,9 @@ class InviteFriends extends StatelessWidget {
                               fontSize:
                               MediaQuery.of(context).size.width * .04),
                         ),
-                        Text(
-                          "",
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontSize:
-                              MediaQuery.of(context).size.width *
-                                  .05),
-                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height*.01,
+                        )
                       ],
                     ),
                     Spacer(),

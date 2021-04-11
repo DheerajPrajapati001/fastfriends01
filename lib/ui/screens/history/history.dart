@@ -13,7 +13,7 @@ class History extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 110,
+            height: 117,
             width: MediaQuery.of(context).size.width,
             color: MyColors.blackCont,
             child: Padding(
@@ -28,7 +28,7 @@ class History extends StatelessWidget {
                       color: Colors.white,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: MediaQuery.of(context).size.height*.01,
                     ),
                     Row(
                       children: [
@@ -135,7 +135,7 @@ class History extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: 10,
+                        width: MediaQuery.of(context).size.width*.015,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -145,7 +145,7 @@ class History extends StatelessWidget {
                             "Hudsons Pub 6:00-11:00PM",
                             style: TextStyle(
                               fontFamily: 'Sego',
-                                fontSize: MediaQuery.of(context).size.width * .05,
+                                fontSize: MediaQuery.of(context).size.width * .045,
                                 fontWeight: FontWeight.bold),
                           ),
                           Text("shawnessy 1231 t2x",style: TextStyle(
@@ -156,7 +156,7 @@ class History extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 5),
                             child: Container(
-                              width: MediaQuery.of(context).size.width*.5,
+                              width: MediaQuery.of(context).size.width*.4,
                               height: 2,
                               color: MyColors.greyCont,
                             ),
